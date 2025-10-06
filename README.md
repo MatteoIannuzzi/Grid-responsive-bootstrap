@@ -1,5 +1,5 @@
 # Grid Layout with Bootstrap 5
-!(Screenshot.png)
+![Screenshot](Screenshot.png)
 A **responsive webpage inspired by Apple’s design**, built with **Bootstrap 5**, **custom CSS**, and **vanilla JavaScript**. It features a **fixed navbar**, a **scrollable sidebar**, and **cards layout** with a glassmorphism effect.
 
 ---
