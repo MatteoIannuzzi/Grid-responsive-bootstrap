@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" /> <!-- Set character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive design -->
+  <title>Bootstrap grid</title> <!-- Page title -->
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet"> <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="index.css" /> <!-- Custom CSS -->
+</head>
+<body>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"> <!-- Navbar element -->
+    <div class="container-fluid"> <!-- Container for navbar content -->
+      <a class="navbar-brand" href="#"><i class="bi bi-apple"></i></a> <!-- Brand icon -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> <!-- Hamburger icon -->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Collapsible menu -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Navbar links -->
+          <li class="nav-item"><a class="nav-link" href="#">Store</a></li> <!-- Single link -->
+          <li class="nav-item dropdown"> <!-- Dropdown menu -->
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Prodotti</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Mac</a></li>
+              <li><a class="dropdown-item" href="#">iPhone</a></li>
+              <li><a class="dropdown-item" href="#">iPad</a></li>
+              <li><a class="dropdown-item" href="#">Watch</a></li>
+              <li><a class="dropdown-item" href="#">AirPods</a></li>
+              <li><hr class="dropdown-divider"></li> <!-- Divider -->
+              <li><a class="dropdown-item" href="#">Supporto Apple</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search"> <!-- Search form -->
+          <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search"> <!-- Search input -->
+          <button class="btn btn-outline-success" type="submit">Cerca</button> <!-- Search button -->
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main layout grid -->
+  <div class="Layout-p d-grid m-2 gap-2"> <!-- Main grid container -->
+
+    <!-- Fixed sidebar -->
+    <div class="box-custom-satin-glass sidebar"> <!-- Sidebar container -->
+      <ul class="list-unstyled lista-side"> <!-- List of sidebar links -->
+        <li><a href="#articolo1" class="btn btn-light w-100 text-start mb-1">Primo</a></li>
+        <li><a href="#articolo2" class="btn btn-light w-100 text-start mb-1">Secondo</a></li>
+        <li><a href="#articolo3" class="btn btn-light w-100 text-start mb-1">Terzo</a></li>
+      </ul>
+    </div>
+
+    <!-- Cards container -->
+    <div class="box-custom-satin-glass cards-container"> <!-- Container for cards -->
+      
+      <!-- Card 1 -->
+      <div class="card-wrapper"> <!-- Card wrapper -->
+        <a href="https://www.apple.com/it/newsroom/2025/03/apple-introduces-the-new-macbook-air-with-the-m4-chip-and-a-sky-blue-color/" class="text-decoration-none">
+          <div class="card"> <!-- Card element -->
+            <img src="https://www.apple.com/newsroom/images/2025/03/apple-introduces-the-new-macbook-air-with-the-m4-chip-and-a-sky-blue-color/article/Apple-MacBook-Air-hero-250305_big.jpg.large_2x.jpg" alt="MacBook Air con chip M4 colore azzurro cielo">
+            <div class="card-img-overlay d-flex align-items-end"> <!-- Overlay with title -->
+              <h5 class="card-title rainbow-gradient bg-dark bg-opacity-50 p-1 rounded">MacBook Air</h5> <!-- Card title -->
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-wrapper">
+        <a href="https://www.apple.com/it/newsroom/2024/09/apple-introduces-iphone-16-iphone-16-plus/" class="text-decoration-none">
+          <div class="card">
+            <img src="https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/geo/Apple-iPhone-16-lineup-geo-240909_big.jpg.large_2x.jpg" alt="iPhone 16">
+            <div class="card-img-overlay d-flex align-items-end">
+              <h5 class="card-title rainbow-gradient bg-dark bg-opacity-50 p-1 rounded">iPhone 16</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card-wrapper">
+        <a href="https://www.apple.com/it/newsroom/2024/09/apple-introduces-all-new-airpods-4-with-industry-defining-audio-and-design/" class="text-decoration-none">
+          <div class="card">
+            <img src="https://www.apple.com/newsroom/images/2024/09/apple-introduces-airpods-4/article/Apple-AirPods-hero-geo-240909_big.jpg.large_2x.jpg" alt="AirPods 4">
+            <div class="card-img-overlay d-flex align-items-end">
+              <h5 class="card-title rainbow-gradient bg-dark bg-opacity-50 p-1 rounded">AirPods</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Articles scrollable -->
+      <div class="col-10"> <!-- Container for articles -->
+        <article class="m-3" data-bs-spy="scroll" data-bs-target="indice" data-bs-smooth-scroll="true">
+          <h3 class="fw-bold" id="articolo1">Articolo di Esempio 1</h3>
+          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quam iusto accusamus expedita natus optio architecto sit soluta, placeat quod reiciendis nam! Et quos ipsum optio earum molestias ea error! Nam amet quos fugit debitis tempore. Similique, minus officiis veritatis quibusdam, impedit facere velit totam sint, sequi ea temporibus placeat incidunt animi sed voluptatem. Ducimus nesciunt soluta numquam fugiat iure provident reiciendis libero id velit earum? Ipsum cupiditate omnis mollitia ad quasi? Optio cum rerum quo deleniti blanditiis ipsum ut fuga commodi nulla, cupiditate assumenda reprehenderit nisi nemo dolore nihil vitae impedit veritatis at nostrum ad numquam quis qui eligendi! Beatae nihil soluta sit rerum, pariatur obcaecati cumque ullam amet illo vitae officiis quae quibusdam mollitia recusandae harum nulla dolor tenetur, delectus cum, veritatis minima repellendus assumenda! Quia exercitationem et adipisci non? Minima maiores odio voluptatibus repudiandae! Veritatis, odit quam. Ipsum doloremque ad sed veniam reprehenderit minus impedit tempora praesentium error tempore voluptatem laboriosam veritatis, dolor quae quis soluta minima earum voluptatum vero expedita ratione deserunt odit. Distinctio excepturi facilis earum possimus omnis ut illo! Eius, corporis quasi nesciunt soluta quae saepe! Ad blanditiis, in quidem dolore maxime sit eum, vel laboriosam qui quo corrupti. Nobis voluptatibus omnis totam obcaecati ut ratione. Voluptatibus sapiente eos culpa odio natus. Voluptatibus temporibus non tempore eaque itaque. Quibusdam, veritatis quod nobis minus deserunt debitis, eligendi tempora dolorem porro iste cum voluptatum! Nostrum aperiam, deserunt est modi cupiditate rerum voluptatibus distinctio minima quasi excepturi quidem. Eveniet odio minus sit earum architecto veritatis, autem ex qui dicta magnam aliquam quibusdam quia consequuntur. Sapiente, inventore itaque minima cupiditate nihil voluptate libero voluptatem sequi aut ducimus alias nobis voluptates et ipsa quas provident dolores maiores, animi esse, sint repellat? Doloremque enim dolor qui architecto distinctio velit corrupti, mollitia nobis eum modi accusantium voluptas id impedit eaque, exercitationem reprehenderit soluta? Deleniti, fugiat in a praesentium, consequatur, unde porro hic quaerat esse magnam perferendis ex culpa omnis quibusdam illum? Deleniti accusamus quisquam expedita libero animi nemo earum voluptates quae nulla asperiores pariatur illo, quos nisi natus quod eveniet inventore? Iusto non velit aut recusandae harum sapiente blanditiis rerum in quam. Eos veritatis possimus optio corrupti esse id aspernatur enim vero aliquam doloremque totam, magnam saepe sapiente libero quam asperiores dicta officiis soluta fuga corporis! Possimus tempora alias quod nisi nesciunt quidem minus consequuntur illo in hic dolores sapiente provident sit vero, eius omnis dolorum laudantium suscipit quibusdam fuga obcaecati exercitationem porro. Vero, dolorem cum. Odit nobis facere eaque quas! Consequuntur voluptatibus iste asperiores voluptate natus et quo tempora optio vel quasi inventore ipsum omnis harum autem illo molestiae rem sed distinctio sapiente, debitis quos quis aliquam veniam. Nostrum cupiditate fugit aut facilis eum exercitationem quos quae! Et, id sed. Voluptatum pariatur cupiditate ipsam error culpa laborum eveniet possimus doloribus asperiores numquam quo ad laboriosam eligendi ea impedit mollitia iusto, molestiae, beatae odit! Ab nisi nobis pariatur commodi, non voluptatem. Est dicta vitae, obcaecati odit aliquam saepe, distinctio expedita asperiores iusto voluptates sapiente laborum inventore ad illo, blanditiis accusantium accusamus. <!-- Article content --> </p>
+        </article>
+
+        <article class="m-3" data-bs-spy="scroll" data-bs-target="indice" data-bs-smooth-scroll="true">
+          <h3 class="fw-bold" id="articolo2">Articolo di Esempio 2</h3>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quasi, quo modi amet in est vero exercitationem excepturi natus consectetur magnam cupiditate reprehenderit facilis iure perspiciatis officia illo enim! Minus itaque et debitis voluptatibus. Sed atque quisquam fuga eligendi, exercitationem praesentium placeat sequi perferendis dolore nesciunt aut molestias explicabo velit. Distinctio doloremque esse fugit id iure nam velit! Eaque voluptate quidem quaerat exercitationem sequi eos expedita ea corrupti voluptatem, cum hic dolores accusamus provident officia libero iste quo sunt iusto? Saepe nostrum eveniet, voluptates suscipit impedit voluptatem laboriosam, quidem numquam eligendi repellendus ducimus atque, repellat accusamus error? Aperiam ratione tempore ipsum vel adipisci veniam nesciunt deleniti quisquam. Consequatur, cum? Earum error expedita nesciunt voluptas cum suscipit sequi ipsam, aliquid, debitis perferendis sunt doloribus odit aspernatur voluptatibus et necessitatibus nisi at totam quas voluptate provident repudiandae! Explicabo itaque, libero delectus porro molestias id hic doloremque incidunt sed nulla sit deleniti expedita ullam rerum sint odio ut obcaecati culpa? Maxime, aliquam ipsa. Iure quas tempore iste doloribus deserunt accusamus totam facere molestiae corporis, a sapiente nisi placeat ratione nemo neque in hic ipsa soluta sit nobis provident aut? Aliquam minima nihil ipsam rerum non quibusdam dicta architecto animi quam dolore repellat eligendi voluptatibus totam consequuntur doloribus tenetur sit quia optio repudiandae, maxime consequatur! Impedit delectus sit consectetur doloribus atque optio dolor tempore hic labore, amet obcaecati repellendus debitis voluptate commodi magni quam, pariatur ab dolorum iusto! Soluta voluptates hic explicabo quaerat minus, perspiciatis illo illum ab commodi maiores earum sed laudantium cum facere labore. Corporis deleniti modi, nisi iusto alias odit veritatis tenetur eum excepturi, vel quam est praesentium necessitatibus sint adipisci dolorem inventore unde officiis nihil omnis accusantium error debitis? Totam, vel numquam recusandae nostrum ratione reiciendis repellat corporis est doloremque aspernatur ut amet exercitationem porro, quam obcaecati dignissimos ducimus culpa maxime placeat ullam aliquam quae, vitae cupiditate incidunt. Tempore omnis, saepe quos, sapiente facilis quaerat, ea architecto libero expedita minus optio fugit quam ab est? Molestiae similique explicabo quo quas distinctio voluptatum fuga iure beatae enim culpa! Aspernatur, amet et maiores assumenda voluptates cupiditate, illo illum incidunt ex quae minima adipisci ipsum rerum! Nemo excepturi expedita qui suscipit sit est sed aperiam consequuntur accusamus quod! Recusandae maiores qui totam libero ipsa maxime, perspiciatis eaque eligendi aut est aliquid tempora autem dolorem iusto hic, molestias minima cupiditate ullam harum a. Eligendi, provident unde. Consectetur aspernatur qui optio ut dolores illo quibusdam ad! Ut harum iure sit numquam voluptatem repellendus necessitatibus ad, iste deserunt qui aliquam aut nemo quas dignissimos neque. Maxime optio sequi, veritatis, obcaecati dolores deserunt minus quae possimus amet veniam dolorum soluta rerum? Ea explicabo atque cumque velit molestiae placeat et architecto aliquam. Aperiam quae velit pariatur reprehenderit, magni delectus fugit quis ea hic, officiis architecto similique perspiciatis omnis, blanditiis iste! Nemo quo magni blanditiis, illum repudiandae sapiente incidunt exercitationem aliquid ut, quisquam similique? Ab libero impedit, corrupti accusamus quas minus nostrum magni non incidunt voluptates unde! Eligendi minus saepe quia voluptatum ab at amet cumque perspiciatis tempore adipisci? </p>
+        </article>
+
+        <article class="m-3" data-bs-spy="scroll" data-bs-target="indice" data-bs-smooth-scroll="true">
+          <h3 class="fw-bold" id="articolo3">Articolo di Esempio 3</h3>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequatur molestias necessitatibus enim veniam itaque eum iure illum delectus fugiat, sint totam repellendus deleniti quam hic aut tenetur non quas architecto odit nemo voluptatibus error ex? Magni in iste aliquam, aperiam, architecto perferendis praesentium incidunt odio iusto itaque asperiores beatae possimus ut? Tenetur, corporis. Eligendi culpa libero quasi corrupti consequuntur? Consequatur sequi cumque optio exercitationem voluptatum aliquam accusamus quibusdam vero iste a quae, doloribus iure doloremque quaerat sed obcaecati officiis consectetur praesentium possimus expedita eius minus ex deserunt. Commodi delectus tempora nihil, totam nam consequatur placeat consequuntur? Nostrum eaque aspernatur aperiam soluta nisi, ipsum, officiis consequatur labore eum praesentium atque laudantium id doloremque veritatis ea consequuntur ullam! Delectus, maiores, tenetur excepturi ratione alias fuga similique pariatur vero quisquam molestias perferendis! Dolorem inventore, illo non pariatur molestiae totam quibusdam debitis delectus consectetur doloribus quae enim deserunt nisi sint nam quas placeat similique ullam dignissimos beatae iure. Ratione quia porro minus nobis possimus beatae provident placeat. Vitae reiciendis voluptatem natus consequatur temporibus reprehenderit, nobis omnis! Ad, qui odio possimus reprehenderit molestias aperiam perspiciatis consectetur reiciendis esse quidem similique, est assumenda enim tempore modi nostrum quo deserunt vero! Numquam dolor rem voluptate nobis at corrupti dolorem quas est quae, eius, necessitatibus iusto, libero dolore doloribus eum! Aliquam itaque, quia, molestias saepe error magnam quod sit quae consectetur distinctio nobis vitae culpa similique sunt totam enim ea harum, eligendi maiores officiis aut incidunt eius! Cumque a enim voluptatibus sed rem accusamus ipsam! Voluptates explicabo esse dolores est, minus distinctio itaque quibusdam, porro, optio non ipsa eum praesentium ea debitis animi qui eveniet. Sequi, eligendi. Voluptatum voluptate quisquam a magni, soluta nemo maxime nam minima pariatur porro eligendi alias labore dolorum rerum consequatur mollitia ipsum, vitae veniam fugiat. Labore, delectus. Quaerat architecto eius provident praesentium officia doloremque tempora, voluptas explicabo repellat ut, magnam excepturi! Nemo, cum. Possimus magni molestiae repellat, itaque saepe omnis, eum, alias veritatis ex repudiandae ipsa blanditiis nihil voluptatibus similique. Saepe totam perferendis repudiandae neque ullam voluptates explicabo aliquid. Voluptatibus itaque enim laboriosam veritatis et doloremque expedita quaerat tempora! Facere delectus velit, obcaecati iusto nemo aspernatur, incidunt, fuga modi necessitatibus temporibus architecto nesciunt possimus rem beatae. Consequuntur eos quia rerum sit libero sunt ratione necessitatibus asperiores mollitia minima praesentium, sint voluptatem facilis quaerat dicta tempore eum veritatis alias vero numquam eaque doloremque? Delectus earum hic mollitia accusamus quae laboriosam cumque exercitationem? Est ducimus sint deserunt ex consectetur. Placeat unde, nostrum, magnam iure non provident tempora cupiditate molestiae quo atque amet ex aspernatur nesciunt aut qui voluptate omnis esse! Iure, blanditiis. Tempora dolorem consequatur voluptatum quam! Autem labore velit harum repudiandae itaque natus debitis reiciendis non enim quia ipsa tempora officiis ratione perferendis, magni recusandae ea tempore cumque! Pariatur voluptate ad architecto rerum, quas itaque tenetur ratione aperiam quam odit? Possimus ipsam, recusandae neque voluptatem mollitia maiores nemo nihil sapiente ullam! Eaque natus quos pariatur quam. Provident officiis aliquam dolores, molestias voluptates suscipit expedita ea eveniet amet, molestiae ullam modi dignissimos beatae sint. </p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

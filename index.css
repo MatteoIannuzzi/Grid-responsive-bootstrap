@@ -1,0 +1,121 @@
+/* Reset CSS Eric Meyer */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  border: 0; /* Remove default border */
+  font-size: 100%; /* Reset font size */
+  vertical-align: baseline; /* Reset vertical alignment */
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; /* HTML5 block elements */
+}
+
+body {
+  line-height: 1; /* Default line height */
+  overflow: hidden; /* Prevent general scroll */
+  background-color: #bebebe88; /* Semi-transparent background */
+  scroll-behavior: smooth;/* Smooth scrolling for anchor links */
+}
+
+ol, ul { list-style: none; } /* Remove list bullets */
+table { border-collapse: collapse; border-spacing: 0; } /* Table reset */
+
+/* ===== Glass effect for cards and sidebar ===== */
+.box-custom-satin-glass {
+  background-color: #ffffff40; /* Semi-transparent white */
+  backdrop-filter: blur(0.625rem); /* Blur background */
+  -webkit-backdrop-filter: blur(0.625rem); /* Safari support */
+  border: 0.0625rem solid #ffffff80; /* Semi-transparent border */
+  box-shadow: 0 0.25rem 0.75rem #0000000d; /* Subtle shadow */
+  border-radius: 0.9375rem; /* Rounded corners */
+  padding: 10px; /* Inner spacing */
+}
+
+/* ===== Main layout grid ===== */
+.Layout-p {
+  display: grid; /* CSS grid */
+  grid-template-columns: 250px 1fr; /* Sidebar + content */
+  gap: 20px; /* Gap between items */
+  padding-top: 4rem; /* Space for navbar */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Avoid double scroll */
+}
+
+/* ===== Sidebar styling ===== */
+.sidebar {
+  position: fixed; /* Fixed position */
+  top: 4rem; /* Below navbar */
+  left: 10px; /* Left margin */
+  width: 230px; /* Sidebar width */
+  height: calc(100vh - 4rem - 20px); /* Full height minus navbar & margin */
+  overflow-y: auto; /* Scroll if content overflows */
+  z-index: 900; /* Above other elements */
+}
+
+/* ===== Cards container styling ===== */
+.cards-container {
+  position: absolute; /* Absolute inside layout */
+  top: 4rem; /* Below navbar */
+  left: 270px; /* Account for sidebar width */
+  right: 10px; /* Right margin */
+  bottom: 10px; /* Bottom margin */
+  overflow-y: auto; /* Enable vertical scroll */
+  display: flex; /* Flex layout for cards */
+  flex-wrap: wrap; /* Wrap cards */
+  gap: 20px; /* Gap between cards */
+  justify-content: center; /* Center cards horizontally */
+  padding: 10px; /* Inner padding */
+}
+
+/* ===== Single card styling ===== */
+.card-wrapper {
+  flex: 1 1 300px; /* Flexible width */
+  max-width: 350px; /* Maximum width */
+}
+
+.card {
+  border-radius: 0.4375rem; /* Rounded corners */
+  overflow: hidden; /* Clip content */
+  position: relative; /* For overlay positioning */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth hover effect */
+}
+
+.card img {
+  display: block; /* Remove inline gap */
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* ===== Gradient text ===== */
+.rainbow-gradient {
+  background: linear-gradient(to right, blue, indigo, violet, red); /* Gradient colors */
+  background-clip: text; /* Clip gradient to text */
+  -webkit-background-clip: text; /* Safari support */
+  color: transparent; /* Make text transparent for gradient */
+  display: inline-block; /* Inline block */
+}
+
+/* ===== Navbar always on top ===== */
+.navbar {
+  z-index: 1000; /* Top layer */
+  position: fixed; /* Fixed position */
+  top: 0; left: 0; right: 0; /* Stretch full width */
+}
